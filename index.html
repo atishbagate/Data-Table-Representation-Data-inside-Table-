@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <title>Pagination table 1 using jQuery</title>
+</head>
+<body>
+    <div class="container mt-4">
+        <h3>select number of rows</h3>
+        <div class="form-group">
+            <select name="state" id="maxRows" class="form-control" style="width: 150px;">
+                <option value="100">show all</option>
+                <option value="5">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+            </select>
+        </div>
+        <table id="mytable" class="table table-bordered table-striped">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+                <tr> <td>Atish</td> <td>a@gmail.com</td> <td>9898989898</td> </tr>
+            </tbody>
+        </table>
+        <div class="pagination-container">
+            <nav>
+                <ul class="pagination"></ul>
+            </nav>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        var table = "#mytable"
+        $('#maxRows').on('change',function(){
+            $('pagination').html('')
+            var trnum = 0
+            var maxRows = parseInt($(this).val())
+            var totalRows = $(table+' tbody tr').length
+                $(table+' tr:gt(0)').each(function(){
+                    trnum++
+                    if(trnum > maxRows){
+                        $(this).hide()
+                    }
+                    if(trnum <= maxRows){
+                        $(this).show()
+                    }
+                })
+                if(totalRows > maxRows){
+                    var pagenum = Math.ceil(totalRows/maxRows)
+                    for(var i=i;i<=pagenum;){
+                        $('.pagination').append('<li data-page="'+i+'">\<span>'+ i++ +'<span class="sr-only">(current)</span></span>\</li>').show()
+                    }
+                }
+        $('.pagination li:first-child').addClass('active')
+        $('.pagination li').on('click',function(){
+                var pagenum = $(this).attr('data-page')
+                var trIndex = 0;
+                $('.pagination li').removeClass('active')
+                $(this).addClass('active')
+                $(table+' tr:gt(0)').each(function(){
+                    trIndex++
+                    if(trIndex >(maxRows*pagenum) || trIndex <=((maxRows*pagenum) - maxRows)){
+                        $(this).hide()
+                    }else{
+                        $(this).show()
+                    }
+                })
+            })
+
+        })
+        $(function(){
+            $('table tr:eq(0)').prepend('<th>ID</th>')
+            var id = 0;
+            $('table tr:gt(0)').each(function(){
+                id++
+                $(this).prepend('<td>'+id+'</td>')
+            })
+        })
+
+    </script>
+</body>
+</html>
